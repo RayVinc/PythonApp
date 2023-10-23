@@ -1,20 +1,113 @@
 <MyRoot>:
+    num_1: num_1
+    num_2: num_2
+    num_3: num_3
+    num_4: num_4
+    num_5: num_5
+    num_6: num_6
+    superzahl: superzahl
 
-    random_label: random_label
+    canvas.before:
+        Color:
+            rgba: 1, 0.87, 0, 1 
+        Rectangle:
+            size: self.size  
+            pos: self.pos    
+            texture: root.gradient_texture()
+
+    orientation: 'vertical'
+    padding: [40, 60]
+    spacing: 40
+
+    Button:
+        text: 'Generate'
+        font_size: 32
+        size_hint: (0.5, None)
+        height: 60
+        on_press: root.generate_numbers()
+
+    Label:
+        text: 'Your generated numbers:'
+        font_size: 28
 
     BoxLayout:
-        orientation: "vertical"
+        spacing: 10
+
+        
         Label:
-            text: 'Lottery Random'
-            font_size: 64
-            color: 0.92, 0.45, 0, 1
-        Label:
-            id: random_label
+            id: num_1
             text: '-'
-            font_size: 64
-        Button:
-            id: generate_button 
-            text: 'Generate'
-            font_size: 32
-            size: 100, 50
-            on_press: root.generate_numbers()
+            font_size: 24
+            color: 0, 0, 0, 1
+            canvas.before:
+                Color:
+                    rgba: 0.9, 0.9, 0.9, 1
+                Ellipse:
+                    pos: self.pos
+                    size: self.size
+
+        Label:
+            id: num_2
+            text: '-'
+            font_size: 24
+            color: 0, 0, 0, 1
+            canvas.before:
+                Color:
+                    rgba: 0.9, 0.9, 0.9, 1
+                Ellipse:
+                    pos: self.pos
+                    size: self.size
+
+        Label:
+            id: num_3
+            text: '-'
+            font_size: 24
+            color: 0, 0, 0, 1
+            canvas.before:
+                Color:
+                    rgba: 0.9, 0.9, 0.9, 1
+                Ellipse:
+                    pos: self.pos
+                    size: self.size
+
+        Label:
+            id: num_4
+            text: '-'
+            font_size: 24
+            color: 0, 0, 0, 1
+            canvas.before:
+                Color:
+                    rgba: 0.9, 0.9, 0.9, 1
+                Ellipse:
+                    pos: self.pos
+                    size: self.size
+        Label:
+            id: num_5
+            text: '-'
+            font_size: 24
+            color: 0, 0, 0, 1
+            canvas.before:
+                Color:
+                    rgba: 0.9, 0.9, 0.9, 1
+                Ellipse:
+                    pos: self.pos
+                    size: self.size
+
+        Label:
+            id: num_6
+            text: '-'
+            font_size: 24
+            color: 0, 0, 0, 1
+            canvas.before:
+                Color:
+                    rgba: 0.9, 0.9, 0.9, 1
+                Ellipse:
+                    pos: self.pos
+                    size: self.size
+
+        
+
+    Label:
+        id: superzahl
+        text: 'Superzahl -'
+        font_size: 24
